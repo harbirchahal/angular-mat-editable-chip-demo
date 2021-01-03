@@ -1,0 +1,11 @@
+<chip-input *ngIf="showInput; else showChip"
+            [value]="chip"
+            (valueChanged)="notifyUpdated($event)"
+            (cancelEdit)="hideInputField()">
+</chip-input>
+<ng-template #showChip>
+  <editable-chip [value]="chip"
+                (removed)="notifyRemoved()"
+                (editChip)="showInputField()">
+  </editable-chip>
+</ng-template>

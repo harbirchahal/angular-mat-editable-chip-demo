@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { MaterialModule } from './shared';
+import { MaterialModule, EditableChipInputModule } from './shared';
+import { ChipsInputExampleComponent } from './components/';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -13,9 +14,11 @@ import { AppComponent } from './app.component';
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
+    EditableChipInputModule,
   ],
   declarations: [
     AppComponent,
+    ChipsInputExampleComponent,
   ],
   bootstrap: [AppComponent]
 })

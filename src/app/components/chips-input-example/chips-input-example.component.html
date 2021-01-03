@@ -1,0 +1,10 @@
+<mat-form-field>
+  <mat-chip-list #chipList>
+    <editable-chip-input *ngFor="let chip of chips; let i = index"
+                        [chip]="chip"
+                        (updated)="update(i, $event)"
+                        (removed)="remove(i)">
+    </editable-chip-input>
+  </mat-chip-list>
+  <mat-hint>Double-click on a chip to edit</mat-hint>
+</mat-form-field>

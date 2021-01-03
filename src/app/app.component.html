@@ -4,4 +4,19 @@
   </mat-toolbar>
 </header>
 <main>
+  <mat-card>
+    <div class="header">
+      <mat-card-title>Favorites</mat-card-title>
+      <mat-card-subtitle>
+        <button mat-icon-button matTooltip="Reset"
+                (click)="resetChips()">
+          <mat-icon>refresh</mat-icon>
+        </button>
+      </mat-card-subtitle>  
+    </div>
+    <mat-card-content>
+      <chips-input-example [chips]="chips">        
+      </chips-input-example>
+    </mat-card-content>
+  </mat-card>
 </main>
